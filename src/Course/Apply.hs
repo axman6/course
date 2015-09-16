@@ -40,8 +40,8 @@ instance Apply Id where
 
 -- | Implement @Apply@ instance for @List@.
 --
--- >>> (+1) :. (*2) :. Nil <*> 1 :. 2 :. 3 :. Nil
--- [2,3,4,2,4,6]
+-- >>> (+1) :. (*100) :. Nil <*> 1 :. 2 :. 3 :. Nil
+-- [2,3,4,100,200,300]
 instance Apply List where
   (<*>) ::
     List (a -> b)
